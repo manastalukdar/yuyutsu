@@ -1,4 +1,4 @@
-# template-repo
+# yuyutsu
 
 1. [Overview](#overview)
 2. [Project](#project)
@@ -20,8 +20,8 @@ Some text
 
 Few badges here: discord/gitter/spectrum server, build status (circleci/travis/github-workflow; ghworkflow preferable), code coverage.
 
-[![build-test-deploy](https://github.com/manastalukdar/template-repo/actions/workflows/main.yml/badge.svg)](https://github.com/manastalukdar/template-repo/actions/workflows/main.yml)
-[![Lint Code Base](https://github.com/manastalukdar/template-repo/actions/workflows/linter.yml/badge.svg)](https://github.com/manastalukdar/template-repo/actions/workflows/linter.yml)
+[![build-test-deploy](https://github.com/manastalukdar/yuyutsu/actions/workflows/main.yml/badge.svg)](https://github.com/manastalukdar/yuyutsu/actions/workflows/main.yml)
+[![Lint Code Base](https://github.com/manastalukdar/yuyutsu/actions/workflows/linter.yml/badge.svg)](https://github.com/manastalukdar/yuyutsu/actions/workflows/linter.yml)
 
 [More project metadata badges [here](./documentation/project/metadata.md). More CI/CD badges [here](./documentation/development/ci-cd.md#current-status).]
 
@@ -33,7 +33,7 @@ Few badges here: discord/gitter/spectrum server, build status (circleci/travis/g
 
 ### Project Management
 
-[GitHub Projects](https://github.com/manastalukdar/template-repo/projects)
+[GitHub Projects](https://github.com/manastalukdar/yuyutsu/projects)
 
 ## Product
 
@@ -60,7 +60,7 @@ Few badges here: discord/gitter/spectrum server, build status (circleci/travis/g
 
 ## Links
 
-- [Sourcegraph](https://sourcegraph.com/github.com/manastalukdar/template-repo/)
+- [Sourcegraph](https://sourcegraph.com/github.com/manastalukdar/yuyutsu/)
 
 ## Notes
 
@@ -68,4 +68,4 @@ Few badges here: discord/gitter/spectrum server, build status (circleci/travis/g
 
 ## License
 
-[MIT](https://github.com/manastalukdar/template-repo/blob/main/LICENSE)
+[MIT](https://github.com/manastalukdar/yuyutsu/blob/main/LICENSE)

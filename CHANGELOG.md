@@ -17,6 +17,6 @@ The format is based on [Keep a Changelog][Keep a Changelog], and this project ad
 [Semantic Versioning]: https://semver.org/
 
 <!-- Versions -->
-[Unreleased]: https://github.com/manastalukdar/template-repo/compare/v0.0.1..HEAD
-[0.0.2]: https://github.com/manastalukdar/template-repo/compare/v0.0.1..v0.0.2
-[0.0.1]: https://github.com/manastalukdar/template-repo/releases/tag/v0.0.1
+[Unreleased]: https://github.com/manastalukdar/yuyutsu/compare/v0.0.1..HEAD
+[0.0.2]: https://github.com/manastalukdar/yuyutsu/compare/v0.0.1..v0.0.2
+[0.0.1]: https://github.com/manastalukdar/yuyutsu/releases/tag/v0.0.1

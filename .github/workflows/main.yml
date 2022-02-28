@@ -36,7 +36,7 @@ jobs:
           java-version: "16.0.0"
           architecture: x64
       - run: java -version
-      - uses: actions/setup-python@v2
+      - uses: actions/setup-python@v3
         with:
           python-version: "3.9"
           architecture: "x64"

@@ -72,3 +72,8 @@ dist
 
 .vscode/.ropeproject
 __pycache__
+
+# Flutter/Dart
+.dart_tool/
+.flutter-plugins-dependencies
+pubspec.lock

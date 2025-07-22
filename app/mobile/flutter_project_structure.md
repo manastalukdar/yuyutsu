@@ -72,6 +72,7 @@ app/mobile/flutter_ereader/
 ## Key Features to Implement
 
 ### Core Reading Features
+
 - Multi-format support (EPUB, PDF, TXT)
 - Reading progress tracking
 - Bookmarks and highlights
@@ -80,12 +81,14 @@ app/mobile/flutter_ereader/
 - Page/scroll modes
 
 ### Library Management
+
 - Book scanning and import
 - Collections/categories
 - Search functionality
 - Reading statistics
 
 ### Cross-Platform Considerations
+
 - Responsive design for different screen sizes
 - Platform-specific file access patterns
 - Shared preferences sync across devices (future)

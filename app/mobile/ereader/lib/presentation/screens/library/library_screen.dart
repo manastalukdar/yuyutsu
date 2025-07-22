@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../core/constants/app_constants.dart';
+import '../../../data/models/file_source.dart';
+import '../file_browser/file_browser_screen.dart';
 
 class LibraryScreen extends StatefulWidget {
   const LibraryScreen({super.key});
@@ -264,11 +266,21 @@ class _LibraryScreenState extends State<LibraryScreen> {
     return 2;
   }
 
-  void _addBook() {
-    // TODO: Implement file picker for adding books
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('Add book functionality coming soon!')),
+  void _addBook() async {
+    final result = await Navigator.push<FileLocation>(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const FileBrowserScreen(),
+      ),
     );
+    
+    if (result != null) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Added: ${result.name}')),
+      );
+      // TODO: Open the selected file in reader
+      // context.go('/reader', extra: result);
+    }
   }
 
   void _showSearchDialog(BuildContext context) {

@@ -24,14 +24,14 @@ class AppTheme {
       elevation: 0,
       centerTitle: true,
     ),
-    cardTheme: CardTheme(
+    cardTheme: const CardThemeData(
       color: surfaceColor,
       elevation: 2,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.all(Radius.circular(12)),
       ),
     ),
-    bottomNavigationBarTheme: const BottomNavigationBarTheme(
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       backgroundColor: surfaceColor,
       selectedItemColor: primaryColor,
       unselectedItemColor: Colors.grey,
@@ -52,14 +52,14 @@ class AppTheme {
       elevation: 0,
       centerTitle: true,
     ),
-    cardTheme: CardTheme(
-      color: const Color(0xFF1F2937),
+    cardTheme: const CardThemeData(
+      color: Color(0xFF1F2937),
       elevation: 2,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.all(Radius.circular(12)),
       ),
     ),
-    bottomNavigationBarTheme: const BottomNavigationBarTheme(
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       backgroundColor: Color(0xFF1F2937),
       selectedItemColor: Color(0xFF818CF8),
       unselectedItemColor: Colors.grey,

@@ -28,6 +28,14 @@ dependencies:
   sqflite: ^2.3.0
   file_picker: ^6.1.1
   permission_handler: ^11.2.0
+  
+  # Cloud storage
+  google_sign_in: ^6.2.1
+  googleapis: ^13.1.0
+  http: ^1.2.0
+  
+  # URL handling
+  url_launcher: ^6.2.4
 
   # UI & responsive design
   flutter_screenutil: ^5.9.0

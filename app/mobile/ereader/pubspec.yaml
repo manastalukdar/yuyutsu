@@ -1,0 +1,55 @@
+name: ereader
+description: A cross-platform e-reader application built with Flutter
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # E-reader packages
+  epub_view: ^3.0.0
+  syncfusion_flutter_pdf: ^24.2.7
+
+  # State management
+  flutter_riverpod: ^2.4.9
+
+  # Navigation
+  go_router: ^12.1.3
+
+  # Storage & file handling
+  shared_preferences: ^2.2.2
+  path_provider: ^2.1.2
+  sqflite: ^2.3.0
+  file_picker: ^6.1.1
+  permission_handler: ^11.2.0
+
+  # UI & responsive design
+  flutter_screenutil: ^5.9.0
+
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.1
+
+flutter:
+  uses-material-design: true
+
+  # Add assets folder for sample books
+  assets:
+    - assets/books/
+    - assets/images/
+
+  # Add custom fonts if needed
+  # fonts:
+  #   - family: CustomFont
+  #     fonts:
+  #       - asset: fonts/CustomFont-Regular.ttf

@@ -108,7 +108,7 @@ yuyutsu/
 5. **Generate database code**:
 
    ```bash
-   flutter packages pub run build_runner build
+   dart run build_runner build
    ```
 
 ### Platform Setup

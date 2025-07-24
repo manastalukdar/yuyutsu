@@ -6,7 +6,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Yuyutsu is a multi-platform project containing:
 
-- **Flutter mobile e-reader app** (`app/mobile/ereader/`) - Cross-platform e-reader supporting EPUB and PDF formats
+- **Flutter e-reader app** (`app/ereader/`) - Multi-platform e-reader supporting EPUB and PDF formats
+  - **Mobile**: iOS and Android support
+  - **Desktop**: macOS support (Windows and Linux ready)
+  - **Web**: Browser-based e-reader with local storage
 - **Website** (`website/`) - JavaScript/Node.js web application
 - **Documentation** (`documentation/`) - Comprehensive project documentation
 - **Template repository structure** with CI/CD workflows and development guidelines
@@ -35,20 +38,32 @@ make git-submodules-setup  # Initialize submodules
 
 ### Flutter E-reader App
 
-Navigate to `app/mobile/ereader/` for Flutter development:
+Navigate to `app/ereader/` for Flutter development:
 
 ```bash
-cd app/mobile/ereader/
+cd app/ereader/
 
 # Install dependencies
 flutter pub get
 
-# Run the app
-flutter run
+# Generate code (required for Drift database)
+flutter packages pub run build_runner build
+
+# Run the app (specify platform)
+flutter run                    # Default (mobile/desktop)
+flutter run -d chrome          # Web browser
+flutter run -d macos           # macOS desktop
+flutter run -d ios             # iOS simulator
+flutter run -d android         # Android emulator
 
 # Build for release
-flutter build apk          # Android
-flutter build ios          # iOS (requires macOS)
+flutter build apk              # Android
+flutter build ios              # iOS (requires macOS)
+flutter build macos            # macOS desktop app
+flutter build web              # Web application
+
+# Clean build (use when switching platforms)
+flutter clean && flutter pub get
 
 # Run tests
 flutter test
@@ -78,22 +93,30 @@ npm run lint    # or npx eslint .
 - **State Management**: Flutter Riverpod for reactive state management
 - **Navigation**: GoRouter for declarative routing
 - **File Formats**: EPUB (epub_view) and PDF (Syncfusion) support
-- **Storage**: SQLite (sqflite) for local data, SharedPreferences for settings
+- **Database**: Drift for cross-platform SQL database (mobile, desktop, web)
+- **Storage**: Platform-specific file handling with fallback to browser storage
 - **Cloud Integration**: Google Drive API integration for cloud storage
+- **Permissions**: Platform-aware permission handling
 - **Responsive Design**: ScreenUtil for cross-device compatibility
 
 Key directories:
 
 - `lib/core/` - App constants, themes, utilities
-- `lib/data/` - Models, repositories, services (file handling, cloud services)
+- `lib/data/` - Models, repositories, services, database layer
+  - `database/` - Drift database setup with DAOs
+  - `services/` - Platform-specific file and permission services
 - `lib/presentation/` - UI screens, widgets, and providers
 - `assets/` - Sample books and images
+
+**Platform-Specific Features:**
+- **Mobile/Desktop**: File system access, native permissions
+- **Web**: IndexedDB storage, LocalStorage for files, browser-based permissions
 
 ### Project Structure
 
 ```plaintext
 app/
-├── mobile/ereader/        # Flutter e-reader application
+├── ereader/               # Multi-platform Flutter e-reader application
 └── shared/                # Shared components
 website/                   # Web application  
 documentation/             # Project documentation
@@ -120,11 +143,22 @@ The project uses GitHub Actions with multiple workflows:
 
 ## Development Environment
 
+- **Flutter SDK** (latest stable) with platform support enabled:
+  - `flutter config --enable-macos-desktop`
+  - `flutter config --enable-web`
+- **Platform Requirements:**
+  - **macOS**: Xcode for iOS builds, Xcode Command Line Tools for macOS builds
+  - **Android**: Android Studio or Android SDK
+  - **Web**: Chrome for debugging and testing
 - **Java 16+** for Android builds
 - **Python 3.9+** with requirements.txt dependencies
 - **Node.js 15+** for web development
-- **Flutter SDK** for mobile development
 - **Git submodules** - Run `make git` to properly initialize
+
+**Important Notes:**
+- Run `flutter packages pub run build_runner build` after dependency changes
+- Use `flutter clean` when switching between platforms
+- Web builds require Chrome for optimal debugging experience
 
 ## File Organization
 

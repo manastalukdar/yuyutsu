@@ -5,6 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Project Overview
 
 Yuyutsu is a multi-platform project containing:
+
 - **Flutter mobile e-reader app** (`app/mobile/ereader/`) - Cross-platform e-reader supporting EPUB and PDF formats
 - **Website** (`website/`) - JavaScript/Node.js web application
 - **Documentation** (`documentation/`) - Comprehensive project documentation
@@ -13,6 +14,7 @@ Yuyutsu is a multi-platform project containing:
 ## Development Commands
 
 ### Primary Build System
+
 The project uses a **Makefile** as the primary build orchestrator:
 
 ```bash
@@ -32,6 +34,7 @@ make git-submodules-setup  # Initialize submodules
 ```
 
 ### Flutter E-reader App
+
 Navigate to `app/mobile/ereader/` for Flutter development:
 
 ```bash
@@ -55,6 +58,7 @@ flutter analyze
 ```
 
 ### Website Development
+
 Navigate to `website/` for web development:
 
 ```bash
@@ -70,6 +74,7 @@ npm run lint    # or npx eslint .
 ## Architecture
 
 ### Flutter E-reader App Structure
+
 - **State Management**: Flutter Riverpod for reactive state management
 - **Navigation**: GoRouter for declarative routing
 - **File Formats**: EPUB (epub_view) and PDF (Syncfusion) support
@@ -78,13 +83,15 @@ npm run lint    # or npx eslint .
 - **Responsive Design**: ScreenUtil for cross-device compatibility
 
 Key directories:
+
 - `lib/core/` - App constants, themes, utilities
 - `lib/data/` - Models, repositories, services (file handling, cloud services)
 - `lib/presentation/` - UI screens, widgets, and providers
 - `assets/` - Sample books and images
 
 ### Project Structure
-```
+
+```plaintext
 app/
 ├── mobile/ereader/        # Flutter e-reader application
 └── shared/                # Shared components
@@ -105,6 +112,7 @@ documentation/             # Project documentation
 ## CI/CD Workflows
 
 The project uses GitHub Actions with multiple workflows:
+
 - **main.yml**: Multi-platform build/test/deploy (Ubuntu, macOS, Windows)
 - **linter.yml**: Code quality checks using GitHub Super Linter
 - **codeql-analysis.yml**: Security analysis

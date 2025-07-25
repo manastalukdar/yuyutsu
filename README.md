@@ -118,6 +118,8 @@ yuyutsu/
 ```bash
 flutter config --enable-macos-desktop
 flutter config --enable-web
+flutter config --enable-windows-desktop
+flutter config --enable-linux-desktop
 ```
 
 ### Running the App

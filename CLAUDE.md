@@ -8,7 +8,7 @@ Yuyutsu is a multi-platform project containing:
 
 - **Flutter e-reader app** (`app/ereader/`) - Multi-platform e-reader supporting EPUB and PDF formats
   - **Mobile**: iOS and Android support
-  - **Desktop**: macOS support (Windows and Linux ready)
+  - **Desktop**: macOS and Linux support (Windows ready)
   - **Web**: Browser-based e-reader with local storage
 - **Website** (`website/`) - JavaScript/Node.js web application
 - **Documentation** (`documentation/`) - Comprehensive project documentation
@@ -53,6 +53,7 @@ flutter packages pub run build_runner build
 flutter run                    # Default (mobile/desktop)
 flutter run -d chrome          # Web browser
 flutter run -d macos           # macOS desktop
+flutter run -d linux           # Linux desktop
 flutter run -d ios             # iOS simulator
 flutter run -d android         # Android emulator
 
@@ -60,6 +61,7 @@ flutter run -d android         # Android emulator
 flutter build apk              # Android
 flutter build ios              # iOS (requires macOS)
 flutter build macos            # macOS desktop app
+flutter build linux            # Linux desktop app
 flutter build web              # Web application
 
 # Clean build (use when switching platforms)
@@ -145,9 +147,11 @@ The project uses GitHub Actions with multiple workflows:
 
 - **Flutter SDK** (latest stable) with platform support enabled:
   - `flutter config --enable-macos-desktop`
+  - `flutter config --enable-linux-desktop`
   - `flutter config --enable-web`
 - **Platform Requirements:**
   - **macOS**: Xcode for iOS builds, Xcode Command Line Tools for macOS builds
+  - **Linux**: CMake, Ninja build system, GTK development libraries
   - **Android**: Android Studio or Android SDK
   - **Web**: Chrome for debugging and testing
 - **Java 16+** for Android builds

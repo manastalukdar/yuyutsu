@@ -38,21 +38,19 @@
 
 ```
 yuyutsu/
-├── app/
-│   ├── ereader/              # Multi-platform Flutter e-reader
-│   │   ├── lib/
-│   │   │   ├── core/         # Constants, themes, utilities
-│   │   │   ├── data/         # Models, database, services
-│   │   │   │   ├── database/ # Drift database with DAOs
-│   │   │   │   ├── models/   # Data models (Book, Bookmark, etc.)
-│   │   │   │   └── services/ # Platform-specific services
-│   │   │   └── presentation/ # UI screens, widgets, providers
-│   │   ├── android/          # Android platform files
-│   │   ├── ios/              # iOS platform files
-│   │   ├── macos/            # macOS platform files
-│   │   ├── web/              # Web platform files
-│   │   └── test/             # Unit and widget tests
-│   └── shared/               # Shared components across apps
+├── app/                      # Multi-platform Flutter e-reader
+│   ├── lib/
+│   │   ├── core/             # Constants, themes, utilities
+│   │   ├── data/             # Models, database, services
+│   │   │   ├── database/     # Drift database with DAOs
+│   │   │   ├── models/       # Data models (Book, Bookmark, etc.)
+│   │   │   └── services/     # Platform-specific services
+│   │   └── presentation/     # UI screens, widgets, providers
+│   ├── android/              # Android platform files
+│   ├── ios/                  # iOS platform files
+│   ├── macos/                # macOS platform files
+│   ├── web/                  # Web platform files
+│   └── test/                 # Unit and widget tests
 ├── website/                  # Node.js web application
 └── documentation/            # Comprehensive project docs
 ```
@@ -96,7 +94,7 @@ yuyutsu/
 3. **Navigate to the Flutter app**:
 
    ```bash
-   cd app/ereader
+   cd app
    ```
 
 4. **Install dependencies**:

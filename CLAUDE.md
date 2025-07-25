@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Yuyutsu is a multi-platform project containing:
 
-- **Flutter e-reader app** (`app/ereader/`) - Multi-platform e-reader supporting EPUB and PDF formats
+- **Flutter e-reader app** (`app/`) - Multi-platform e-reader supporting EPUB and PDF formats
   - **Mobile**: iOS and Android support
   - **Desktop**: macOS and Linux support (Windows ready)
   - **Web**: Browser-based e-reader with local storage
@@ -38,10 +38,10 @@ make git-submodules-setup  # Initialize submodules
 
 ### Flutter E-reader App
 
-Navigate to `app/ereader/` for Flutter development:
+Navigate to `app/` for Flutter development:
 
 ```bash
-cd app/ereader/
+cd app/
 
 # Install dependencies
 flutter pub get
@@ -117,9 +117,7 @@ Key directories:
 ### Project Structure
 
 ```plaintext
-app/
-├── ereader/               # Multi-platform Flutter e-reader application
-└── shared/                # Shared components
+app/                       # Multi-platform Flutter e-reader application
 website/                   # Web application  
 documentation/             # Project documentation
 ├── development/           # Development guides, CI/CD

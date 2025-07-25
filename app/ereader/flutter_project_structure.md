@@ -38,7 +38,7 @@ dev_dependencies:
 ## Project Structure
 
 ```
-app/mobile/flutter_ereader/
+app/ereader/
 ├── lib/
 │   ├── main.dart
 │   ├── core/

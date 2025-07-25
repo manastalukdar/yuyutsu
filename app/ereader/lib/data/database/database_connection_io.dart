@@ -14,7 +14,7 @@ LazyDatabase openConnection() {
     }
 
     final dbFolder = await getApplicationDocumentsDirectory();
-    final file = File(p.join(dbFolder.path, 'ereader.db'));
+    final file = File(p.join(dbFolder.path, 'yuyutsu_ereader.db'));
     
     return NativeDatabase.createInBackground(file);
   });

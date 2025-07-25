@@ -37,6 +37,6 @@ class AppConstants {
   static const String storageKeyBookmarks = 'bookmarks';
   
   // Database
-  static const String databaseName = 'ereader.db';
+  static const String databaseName = 'yuyutsu_ereader.db';
   static const int databaseVersion = 1;
 }

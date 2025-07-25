@@ -4,7 +4,7 @@ import 'dart:convert';
 import 'platform_file_service.dart';
 
 class PlatformFileServiceWeb extends PlatformFileServiceBase {
-  static const String _storagePrefix = 'ereader_files_';
+  static const String _storagePrefix = 'yuyutsu_ereader_files_';
   
   @override
   Future<String> getApplicationDocumentsPath() async {

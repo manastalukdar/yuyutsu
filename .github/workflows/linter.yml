@@ -50,7 +50,7 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          FILTER_REGEX_EXCLUDE: .*(website/.*.md\.github|\.vscode|CODE_OF_CONDUCT.md|README.md|documentation).*
+          FILTER_REGEX_EXCLUDE: .*(website/.*.md\.github|\.vscode|CODE_OF_CONDUCT.md|README.md|documentation|app/build|app/.*\.g\.dart|app/.*\.freezed\.dart).*
           JAVASCRIPT_DEFAULT_STYLE: prettier
           LINTER_RULES_PATH: "."
           EDITORCONFIG_FILE_NAME: .editorconfig
@@ -58,3 +58,29 @@ jobs:
           VALIDATE_PYTHON_BLACK: false
           VALIDATE_PYTHON_FLAKE8: false
           VALIDATE_PYTHON_ISORT: false
+
+  flutter-analyze:
+    name: Flutter Analysis
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.24.0'
+          channel: 'stable'
+          cache: true
+
+      - name: Install dependencies
+        working-directory: app
+        run: flutter pub get
+
+      - name: Generate code
+        working-directory: app
+        run: dart run build_runner build --delete-conflicting-outputs
+
+      - name: Analyze Flutter code
+        working-directory: app
+        run: flutter analyze

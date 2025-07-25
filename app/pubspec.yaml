@@ -33,7 +33,7 @@ dependencies:
   
   # Cloud storage
   google_sign_in: ^6.2.1
-  googleapis: ^13.1.0
+  googleapis: ^14.0.0
   http: ^1.2.0
   
   # URL handling
